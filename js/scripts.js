@@ -2,23 +2,26 @@
 var backendFunction = function(anyNumber) {
   var numArray = [];
     for (var i = 0; i <=anyNumber; i++) {
-      numArray.push(i);
-    } //numArray for-loop
-
-    for (var iNumArray = 0; iNumArray < numArray.length; iNumArray ++) {
-      if (numArray[iNumArray].includes(0)) {
-        numArray[iNumArray] = "Beep!"
+      if (i.length >= 2) {
+        i.
       }
-      if (numArray[iNumArray].includes(1)) {
+      numArray.push(i);
+
+    } //numArray for-loop
+    for (var iNumArray = 0; iNumArray < numArray.length; iNumArray ++) {
+
+      if (numArray.includes(0)) {
+        numArray[iNumArray] = "Beep!"
+      } else if (numArray.includes(1)) {
         numArray[iNumArray] = "Boop!"
       }
+
       // if ((numArray[iNumArray]).includes(%3 === 0)) {
       //   numArray[iNumArray] = "I'm sorry, Dave. I'm afraid I can't do that."
-      }
-    } else {
-      return numArray;
-    }
 
+    } //iNum for-loop
+
+    return numArray;
   } //backendFunction
 
 
