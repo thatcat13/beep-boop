@@ -6,15 +6,19 @@ var backendFunction = function(anyNumber) {
     } //numArray for-loop
 
     for (var iNumArray = 0; iNumArray < numArray.length; iNumArray ++) {
-      if (numArray[iNumArray] === 0) {
+      if (numArray[iNumArray].includes(0)) {
         numArray[iNumArray] = "Beep!"
-      } else if (numArray[iNumArray] === 1) {
-        numArray[iNumArray] = "Boop!"
-      } else if ((numArray[iNumArray]) % 3 === 0) {
-        numArray[iNumArray] = "I'm sorry, Dave. I'm afraid I can't do that."
       }
-    } //iNum for-loop
-  return numArray;
+      if (numArray[iNumArray].includes(1)) {
+        numArray[iNumArray] = "Boop!"
+      }
+      // if ((numArray[iNumArray]).includes(%3 === 0)) {
+      //   numArray[iNumArray] = "I'm sorry, Dave. I'm afraid I can't do that."
+      }
+    } else {
+      return numArray;
+    }
+
   } //backendFunction
 
 
