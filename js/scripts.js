@@ -14,8 +14,9 @@ var backendFunction = function(anyNumber) {
         numArray[iNumArray] = "I'm sorry, Dave. I'm afraid I can't do that."
       }
     } //iNum for-loop
-    return numArray;
+  return numArray;
   } //backendFunction
+
 
 
 //frontend logic
@@ -23,18 +24,12 @@ $(document).ready(function(){
   $("#beep-boop").submit(function(event) {
     event.preventDefault();
     var userInput = parseInt($("#inputNum").val());
+    $("#returnList").empty();
     var result = backendFunction(userInput);
 
     result.forEach(function(li) {
       $("#returnList").append("<li>" + li + "</li>")
       $("form")[0].reset();
-      $("#returnList").submit(function() {
-        $(this).remove();
-      });
-
     });
-
-
-
   }); //event
 }); //doc ready
