@@ -28,7 +28,10 @@ $(document).ready(function(){
     result.forEach(function(li) {
       $("#returnList").append("<li>" + li + "</li>")
       $("form")[0].reset();
-      $("#returnList").end();
+      $("#returnList").last().submit(function() {
+        $(this).remove();
+      });
+
     });
 
 
