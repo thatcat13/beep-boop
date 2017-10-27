@@ -15,6 +15,9 @@ var backendFunction = function(anyNumber) {
       }
     } //iNum for-loop
     return numArray;
+
+
+
   } //backendFunction
 
 
@@ -24,6 +27,13 @@ $(document).ready(function(){
     event.preventDefault();
     var userInput = parseInt($("#inputNum").val());
     var result = backendFunction(userInput);
-    $("#outputText").text(result);
+
+    result.forEach(function(li) {
+      $("#returnList").append("<li>" + li + "</li>")
+      $("form")[0].reset();
+    });
+
+
+
   }); //event
 }); //doc ready
