@@ -16,10 +16,10 @@ var beepBoop = function(anyNumber) {
     });
 
     for (var iStrArray = 0; iStrArray < stringArray.length; iStrArray ++) {
-      if (stringArray[iStrArray].includes("0")) {
-        return stringArray[iStrArray] = "Beep!"
-      } else if (stringArray[iStrArray].includes("1")) {
-        return stringArray[iStrArray] = "Boop!"
+      if (stringArray[iStrArray].includes["0"]) {
+        return stringArray[iStrArray] === "Beep!";
+      } else if (stringArray[iStrArray].includes["1"]) {
+        return stringArray[iStrArray] === "Boop!";
       }
     }
     console.log(stringArray);
@@ -27,17 +27,17 @@ var beepBoop = function(anyNumber) {
 
 
 
-// //frontend logic
-// $(document).ready(function(){
-//   $("#beep-boop").submit(function(event) {
-//     event.preventDefault();
-//     var userInput = parseInt($("#inputNum").val());
-//     $("#returnList").empty();
-//     var result = beepBoop(userInput);
-//
-//     result.forEach(function(li) {
-//       $("#returnList").append("<li>" + li + "</li>")
-//       $("form")[0].reset();
-//     });
-//   }); //event
-// }); //doc ready
+//frontend logic
+$(document).ready(function(){
+  $("#beep-boop").submit(function(event) {
+    event.preventDefault();
+    var userInput = parseInt($("#inputNum").val());
+    $("#returnList").empty();
+    var result = beepBoop(userInput);
+
+    result.forEach(function(li) {
+      $("#returnList").append("<li>" + li + "</li>")
+      $("form")[0].reset();
+    });
+  }); //event
+}); //doc ready
