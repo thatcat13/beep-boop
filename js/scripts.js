@@ -13,14 +13,13 @@ var beepBoop = function(anyNumber) {
 
     var stringArray = numArray.map(function(x) {
       return x.toString();
-
     });
 
     for (var i = 0; i < stringArray.length; i++) {
-      if (stringArray[i].includes("0") {
-        stringArray[i] = "Beep!";
-      } else if (stringArray[i].includes("1") {
-        stringArray[i] = "Boop!";
+      if (stringArray[i].includes("0")) {
+        stringArray[i] = "Beep!"
+      } else if (stringArray[i].includes("1")) {
+        stringArray[i] = "Boop!"
       }
     }
     return stringArray;
