@@ -16,12 +16,23 @@ var beepBoop = function(anyNumber) {
     });
 
     for (var i = 0; i < stringArray.length; i++) {
-      if (stringArray[i].includes("0")) {
-        stringArray[i] = "Beep!"
+      if (stringArray[i] === "10") {
+        stringArray[i] = "Boop!Beep!"
+      } else if ((stringArray[i].includes("10")) && (stringArray[i].includes("0"))) {
+        stringArray[i] = "Boop!Beep!Beep!"
+      } else if ((stringArray[i].includes("10")) && (stringArray[i].includes("1"))) {
+        stringArray[i] = "Boop!Beep!Boop!"
+      } else if (stringArray[i].includes("11") && (stringArray[i].includes("0"))) {
+        stringArray[i] = "Boop!Boop!Beep!"
+      } else if (stringArray[i] === "00") {
+        stringArray[i] = "Beep!Beep!"
       } else if (stringArray[i].includes("1")) {
         stringArray[i] = "Boop!"
+      }  else if (stringArray[i].includes("0")) {
+        stringArray[i] = "Beep!"
       }
     }
+
     return stringArray;
 } //backendFunction
 
