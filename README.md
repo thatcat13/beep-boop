@@ -29,19 +29,17 @@ This is a solo project that involves the design of a game that receives a number
   * Example Input: ["0", "1", "2", "3", "4"]
   * Example Output: ["Beep!", "Boop!", "2", "I'm sorry, Dave. I'm afraid I can't do that.", "4"]
 
-* string array is tested incrementally from left to right using a for-loop; if the "number" includes "0" = true && if the "number" includes "1" = true, both "numbers" are replaced with "Boop!Beep!":
+* string array is tested incrementally from left to right using a for-loop; if the "number" === "10" the "number" is replaced with "Boop!Beep!":
   * Example Input: ["8", "9", "10", "11"]
   * Example Output: ["8", "I'm sorry, Dave. I'm afraid I can't do that.", "Boop!Beep!", "11"]
 
-* string array is tested incrementally from left to right using a for-loop; if the "number" includes "11" = true the "number" is replaced with "Boop!Boop!":
+* string array is tested incrementally from left to right using a for-loop; if the "number" === "11" the "number" is replaced with "Boop!Boop!":
   * Example Input: ["8", "9", "10", "11"]
   * Example Output: ["8", "I'm sorry, Dave. I'm afraid I can't do that.", "Boop!Beep!", "Boop!Boop!"]
 
-* string array is tested incrementally from left to right using a for-loop; if the "number" includes "00" = true the "number" is replaced with "Beep!Beep!":
-  * Example Input: ["8", "9", "10", "11", "100"]
-  * Example Output: ["8", "I'm sorry, Dave. I'm afraid I can't do that.", "Boop!Beep!", "Boop!Boop!", "Boop!Beep!Beep!"]
-
-
+* string array is tested incrementally from left to right using a for-loop; if the "number" === "100" the "number" is replaced with "Boop!Beep!Beep!":
+  * Example Input: ["96", "97", "98", "99", "100"]
+  * Example Output: ["96", "97", "98", "99", "Boop!Beep!Beep!"]
 
 
 ## Setup/Installation Requirements
