@@ -10,20 +10,29 @@ This is a solo project that involves the design of a game that receives a number
 
 ## SPECIFICATIONS
 
-* game returns an output of numbers, starting at 0 and up to the number inputted
+* set input field to numbers so only numbers can be received
+* game returns an output of integers in an array, starting at 0 and up to the number inputted
   * Example Input: 4
-  * Example Output (to be modified further): 0, 1, 2, 3, 4
+  * Example Output (to be modified further): [0, 1, 2, 3, 4]
 
-* game replaces every 0 with "Beep!" in that position
-* game replaces every 1 with "Boop!" in that position
-* game replaces every number evenly divisible by 3 with "I'm sorry, Dave. I'm afraid I can't do that." in that position
-* game returns an unordered list containing the entire output with replacements located at corresponding positions
-  * Example Output (modified):
-    * "Beep!"
-    * "Boop!"
-    * 2
-    * "I'm sorry, Dave. I'm afraid I can't do that."
-    * 4
+* number array is tested incrementally from left to right using a for-loop; if the number %3 === 0 = true, it is replaced with "I'm sorry, Dave. I'm afraid I can't do that."
+  * Example Input: 4
+  * Example Output: [0, 1, 2, "I'm sorry, Dave. I'm afraid I can't do that.", 4]
+
+* at this point, the array contains both integers and strings. mixed array is converted to one data type, strings, using the .toStrings() method
+
+* string array is tested incrementally from left to right using a for-loop; if the "number" includes "0" = true && if the "number" includes "1" = true, both "numbers" are replaced with "Boop!Beep!":
+  * Example Input: ["8", "9", "10", "11"]
+  * Example Output: ["8", "I'm sorry, Dave. I'm afraid I can't do that.", "Boop!Beep!", "11"]
+
+* string array is tested incrementally from left to right using a for-loop; if the "number" includes "11" = true the "number" is replaced with "Boop!Boop!":
+  * Example Input: ["8", "9", "10", "11"]
+  * Example Output: ["8", "I'm sorry, Dave. I'm afraid I can't do that.", "Boop!Beep!", "Boop!Boop!"]
+
+  * string array is tested incrementally from left to right using a for-loop; if the "number" includes "00" = true the "number" is replaced with "Beep!Beep!":
+    * Example Input: ["8", "9", "10", "11", "100"]
+    * Example Output: ["8", "I'm sorry, Dave. I'm afraid I can't do that.", "Boop!Beep!", "Boop!Boop!", "Boop!Beep!Beep!"]
+
 
 ## Setup/Installation Requirements
 
