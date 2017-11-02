@@ -15,17 +15,17 @@ This is a solo project that involves the design of a game that receives a number
   * Example Input: 4
   * Example Output (to be modified further): [0, 1, 2, 3, 4]
 
-* number array is tested incrementally from left to right using a for-loop; if the number %3 === 0 = true, it is replaced with "I'm sorry, Dave. I'm afraid I can't do that."
+* number array is tested incrementally from left to right using a for-loop; if the number %3 === 0 is true, it is replaced with "I'm sorry, Dave. I'm afraid I can't do that."
   * Example Input: 4
   * Example Output: [0, 1, 2, "I'm sorry, Dave. I'm afraid I can't do that.", 4]
 
 * at this point, the array contains both integers and strings. mixed array is converted to one data type, strings, using the .toStrings() method
 
-* string array is tested incrementally from left to right using a for-loop; if the "number" includes "0" = true the "number" is replaced with "Beep!":
+* string array is tested incrementally from left to right using a for-loop; if the "number" **includes** "0" is true the "number" is replaced with "Beep!":
   * Example Input: ["0", "1", "2", "3", "4"]
   * Example Output: ["Beep!", "1", "2", "I'm sorry, Dave. I'm afraid I can't do that.", "4"]
 
-* string array is tested incrementally from left to right using a for-loop; if the "number" includes "1" = true the "number" is replaced with "Boop!":
+* string array is tested incrementally from left to right using a for-loop; if the "number" **includes** "1" = true the "number" is replaced with "Boop!":
   * Example Input: ["0", "1", "2", "3", "4"]
   * Example Output: ["Beep!", "Boop!", "2", "I'm sorry, Dave. I'm afraid I can't do that.", "4"]
 
